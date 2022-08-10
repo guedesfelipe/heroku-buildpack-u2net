@@ -11,5 +11,15 @@ CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
+
+echo "-----> Create .u2net dir"
+mkdir ~/.u2net/
+
+echo "-----> Installing gdown"
+pip install gdown
+
 echo "-----> Downloading u2net model..."
-pip --version
+python -c "import gdown;import os;path=os.path.join('~'', '.u2net');gdown.download(https://drive.google.com/uc?id=1tCU5MM1LhRgGou5OpmpjBQbSrYIUoYab, str(path), use_cookies=False)"
+
+echo "-----> List .u2net folder"
+ls ~/.u2net/
