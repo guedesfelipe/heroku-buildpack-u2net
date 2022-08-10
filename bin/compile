@@ -12,8 +12,10 @@ ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
 
-echo "-----> PWD"
-pwd
+echo "-----> LS"
+ls /app/
+ls /
+# /app/.u2net/u2net.onnx
 
 echo "-----> Create .u2net dir"
 mkdir ~/.u2net/
