@@ -12,6 +12,9 @@ ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
 
+echo "-----> List Build Dir"
+ls $BUILD_DIR
+
 echo "-----> Create .u2net dir"
 mkdir /app/.u2net/
 
