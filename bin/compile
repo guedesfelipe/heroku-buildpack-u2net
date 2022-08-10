@@ -19,7 +19,7 @@ echo "-----> Installing gdown"
 pip install gdown
 
 echo "-----> Downloading u2net model..."
-python -c "import gdown;import os;path=os.path.join('~'', '.u2net');gdown.download(https://drive.google.com/uc?id=1tCU5MM1LhRgGou5OpmpjBQbSrYIUoYab, str(path), use_cookies=False)"
+python -c "import gdown;import os;path=os.path.join('~', '.u2net');gdown.download('https://drive.google.com/uc?id=1tCU5MM1LhRgGou5OpmpjBQbSrYIUoYab', str(path), use_cookies=False)"
 
 echo "-----> List .u2net folder"
 ls ~/.u2net/
