@@ -12,19 +12,15 @@ ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
 
-echo "-----> LS"
-ls /app/
-ls /
-# /app/.u2net/u2net.onnx
-
 echo "-----> Create .u2net dir"
-mkdir ~/.u2net/
+mkdir /app/.u2net/
 
 echo "-----> Installing gdown"
 pip install gdown
 
 echo "-----> Downloading u2net model..."
-python -c "import gdown;gdown.download('https://drive.google.com/uc?id=1tCU5MM1LhRgGou5OpmpjBQbSrYIUoYab', '~/.u2net/', use_cookies=False)"
+python -c "import gdown;gdown.download('https://drive.google.com/uc?id=1tCU5MM1LhRgGou5OpmpjBQbSrYIUoYab', '/app/.u2net/', use_cookies=False)"
 
 echo "-----> List .u2net folder"
-ls ~/.u2net/
+ls /app/
+ls /app/.u2net/
