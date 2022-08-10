@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Download u2net model"
+exit 0
